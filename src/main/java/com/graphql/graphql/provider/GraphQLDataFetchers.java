@@ -1,6 +1,5 @@
 package com.graphql.graphql.provider;
 
-import com.google.common.collect.ImmutableMap;
 import com.graphql.graphql.model.Author;
 import com.graphql.graphql.model.Book;
 
@@ -8,11 +7,7 @@ import graphql.schema.DataFetcher;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
-
-import javax.annotation.PostConstruct;
 
 @Component
 public class GraphQLDataFetchers {
@@ -53,7 +48,7 @@ public class GraphQLDataFetchers {
 
     }
 
-    public DataFetcher getBookByIdDataFetcher() {
+    public DataFetcher<Book> getBookByIdDataFetcher() {
         return dataFetchingEnvironment -> {
             String bookId = dataFetchingEnvironment.getArgument("id");
             return books
@@ -64,7 +59,7 @@ public class GraphQLDataFetchers {
         };
     }
 
-    public DataFetcher getAuthorDataFetcher() {
+    public DataFetcher<Author> getAuthorDataFetcher() {
         return dataFetchingEnvironment -> {
             Book book = dataFetchingEnvironment.getSource();
             String authorId = book.getAuthorId();
