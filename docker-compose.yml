@@ -1,0 +1,24 @@
+version: "3.5"
+services:
+  graphql:
+    build: .
+    container_name: graphql
+    ports: 
+      - "9012:9012" 
+    networks:
+      - graphql
+      - db-networks
+    environment:
+      - PROFILE=production
+      - MONGODB_HOST=mongodb_container
+      - MONGODB_PORT=27017
+      - MONGODB_USERNAME=root
+      - MONGODB_PASSWORD=example
+      - MONGODB_NAME=admin
+
+networks:
+  graphql:
+    name: graphql
+  db-networks : 
+    external: 
+      name: mongodb-networks
