@@ -36,7 +36,7 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [9012],
 
-	"postCreateCommand": "java -version",
+	"postCreateCommand": "java --version",
 
 	"remoteUser": "vscode"
 	// Use 'postCreateCommand' to run commands after the container is created.
