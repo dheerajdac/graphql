@@ -33,3 +33,5 @@ build/
 .vscode/
 .devcontainer/known_hosts
 .DS_Store
+.devcontainer/.ssh/
+.devcontainer/.gitconfig

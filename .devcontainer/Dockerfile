@@ -10,7 +10,7 @@ FROM dheerajdac/alpine:${VARIANT}
 # [Optional] Uncomment this line to install global node packages.
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
 
-ARG KNOWN_HOSTS=known_hosts
+ARG KNOWN_HOSTS=.ssh
 COPY $KNOWN_HOSTS /root/.ssh
 
 COPY .gitconfig /root

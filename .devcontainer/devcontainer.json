@@ -20,9 +20,15 @@
 	
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"vscjava.vscode-java-pack",
 		"gabrielbb.vscode-lombok",
-		"pivotal.vscode-spring-boot"
+		"visualstudioexptteam.vscodeintellicode",
+		"redhat.java",
+		"vscjava.vscode-maven",
+		"vscjava.vscode-java-test",
+		"vscjava.vscode-java-dependency",
+		"vscjava.vscode-java-debug",
+		"pivotal.vscode-spring-boot",
+		"vscjava.vscode-spring-initializr"
 	],
 
 	"remoteEnv": { "LOCAL_USER_PATH": "${localEnv:HOME}${localEnv:USERPROFILE}" },
