@@ -14,8 +14,8 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash",
+		"maven.executable.path": "/usr/lib/mvn",
 		"java.home": "/opt/java/openjdk",
-		"maven.executable.path": "/usr/local/sdkman/candidates/maven/current/bin/mvn"
 	},
 	
 	// Add the IDs of extensions you want installed when the container is created.
