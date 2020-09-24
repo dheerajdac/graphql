@@ -34,9 +34,9 @@
 	"remoteEnv": { "LOCAL_USER_PATH": "${localEnv:HOME}${localEnv:USERPROFILE}" },
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [9012],
+	"forwardPorts": [9099],
 
-	"postCreateCommand": "java --version",
+	"postCreateCommand": "java -version",
 
 	"remoteUser": "root"
 	// Use 'postCreateCommand' to run commands after the container is created.

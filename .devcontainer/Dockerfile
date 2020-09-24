@@ -14,3 +14,4 @@ ARG KNOWN_HOSTS=.ssh
 COPY $KNOWN_HOSTS /root/.ssh
 
 COPY .gitconfig /root
+RUN chmod 400 /root/.ssh/id_rsa
