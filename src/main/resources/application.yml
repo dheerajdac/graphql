@@ -1,26 +1,11 @@
 server:
-  port: 9012
+  port: 9099
 
 spring:
   application:
     name: GraphQl
 
-database:
-  name : admin
-  username : root
-  password : example
-  host: localhost
-  port : 27017
-
 ---
 spring:
   profiles: production
-  kafka:
-    bootstrap-servers: ${KAFKA}
-database:
-  name : ${MONGODB_NAME}
-  username : ${MONGODB_USERNAME}
-  password : ${MONGODB_PASSWORD}
-  host: ${MONGODB_HOST}
-  port : ${MONGODB_PORT}
   

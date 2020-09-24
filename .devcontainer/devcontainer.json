@@ -5,22 +5,16 @@
 	"build": {
 		"dockerfile": "Dockerfile",
 		"args": {
-			// Update the VARIANT arg to pick a Java version: 11, 14
-			"VARIANT": "14",
-			// Options
-			"INSTALL_MAVEN": "true",
-			"INSTALL_GRADLE": "false",
-			"INSTALL_NODE": "false",
-			"NODE_VERSION": "lts/*"
+			"VARIANT": "1"
 		}
 	},
 
-	"mounts": ["source=${localEnv:HOME}/.m2/repository,target=/home/vscode/.m2/repository,type=bind,consistency=cached"],
+	"mounts": ["source=${localEnv:HOME}/.m2/repository,target=/root/.m2/repository,type=bind,consistency=cached"],
 		
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"java.home": "/docker-java-home",
+		"java.home": "/opt/java/openjdk",
 		"maven.executable.path": "/usr/local/sdkman/candidates/maven/current/bin/mvn"
 	},
 	
@@ -38,7 +32,7 @@
 
 	"postCreateCommand": "java --version",
 
-	"remoteUser": "vscode"
+	"remoteUser": "root"
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
 
